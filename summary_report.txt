@@ -1,0 +1,86 @@
+
+DATASET STATISTICS
+  * Total samples: 118
+  * Train samples: 94 (80%)
+  * Test samples: 24 (20%)
+  * Emotion classes: 6
+  * Classes: anger, fear, joy, love, neutral, sadness
+
+FEATURE ENGINEERING
+  * Method: TF-IDF Vectorization
+  * Max features: 5000
+  * N-gram range: (1, 2)
+  * Feature dimension: 296
+
+MODELS TRAINED
+  * Naive Bayes
+  * SVM (Linear)
+  * Logistic Regression
+
+BEST MODEL: SVM (Linear)
+  * Accuracy: 0.8333
+  * Precision: 0.3636
+  * Recall: 0.4000
+  * F1-Score: 0.3800
+
+REPRODUCIBILITY
+  * Random seed: 42
+  * Test size: 0.20
+  * All results saved to: results
+
+OUTPUT FILES
+  * confusion_matrices.png
+  * metrics_comparison.png
+  * feature_importance.png
+
+
+DETAILED RESULTS:
+================================================================================
+
+Naive Bayes:
+              precision    recall  f1-score   support
+
+       anger      0.000     0.000     0.000         2
+        fear      0.000     0.000     0.000         1
+         joy      0.000     0.000     0.000         2
+        love      0.000     0.000     0.000         1
+     neutral      0.750     1.000     0.857        18
+     sadness      0.000     0.000     0.000         0
+
+    accuracy                          0.750        24
+   macro avg      0.125     0.167     0.143        24
+weighted avg      0.562     0.750     0.643        24
+
+================================================================================
+
+SVM (Linear):
+              precision    recall  f1-score   support
+
+       anger      0.000     0.000     0.000         2
+        fear      0.000     0.000     0.000         1
+         joy      1.000     1.000     1.000         2
+        love      0.000     0.000     0.000         1
+     neutral      0.818     1.000     0.900        18
+     sadness      0.000     0.000     0.000         0
+
+    accuracy                          0.833        24
+   macro avg      0.303     0.333     0.317        24
+weighted avg      0.697     0.833     0.758        24
+
+================================================================================
+
+Logistic Regression:
+              precision    recall  f1-score   support
+
+       anger      0.000     0.000     0.000         2
+        fear      0.000     0.000     0.000         1
+         joy      0.000     0.000     0.000         2
+        love      0.000     0.000     0.000         1
+     neutral      0.750     1.000     0.857        18
+     sadness      0.000     0.000     0.000         0
+
+    accuracy                          0.750        24
+   macro avg      0.125     0.167     0.143        24
+weighted avg      0.562     0.750     0.643        24
+
+================================================================================
